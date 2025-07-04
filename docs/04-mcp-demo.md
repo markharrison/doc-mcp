@@ -69,7 +69,7 @@ The Time MCP server runs in a local container. Ensure that Docker Desktop (or a 
 
 ## Display MCP Tools
 
-ach server will have a grey status line displayed in the mcp.json file. Ensure that each server shows a status of "Running" and that there are no errors present.
+Each server will have a grey status line displayed in the mcp.json file. Ensure that each server shows a status of "Running" and that there are no errors present.
 
 ![](images/demo1.png)
 
@@ -121,7 +121,7 @@ In the screenshot, you can see the container started in Docker Desktop.
 ![](images/demo5.png)
 
 
-### PlayWright MCP Server
+### Playwright MCP Server
 
 In GitHub Copilot, ask the following:
 

@@ -39,7 +39,7 @@ MCP supports two primary transport mechanisms:
 
 - HTTP (Streamable): Facilitates remote communication over the web. 
 
-Note some documentation referes to SSE (Server-Sent Events) - this has recently been deprecated in favor of standard HTTP streaming.
+Note some documentation refers to SSE (Server-Sent Events) - this has recently been deprecated in favor of standard HTTP streaming.
 
 
 ## MCP Ecosystem
