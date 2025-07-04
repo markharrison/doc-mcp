@@ -1,5 +1,5 @@
-# Building Agentic AI Apps
+# Model Context Protocol
 
-Mark Harrison : 15 March 2025  
+Mark Harrison : 4 July 2025  
 
-<https://markharrison.io/doc-agentic-ai-apps/>
+<https://markharrison.io/doc-mcp/>
