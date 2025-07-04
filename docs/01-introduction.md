@@ -9,7 +9,7 @@ sidebar_label: 'Introduction'
 
 4 July 2025
 
-![mcp](https://markharrison.io/assets/images/agenticai-68e9547c129a7fda7e133685dfdd8afd.png)
+![mcp](images/mcp.png)
 
 ## Introduction
 
