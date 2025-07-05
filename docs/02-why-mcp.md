@@ -23,8 +23,6 @@ However, these AI endpoints have a key limitation: they are trained only on data
 
 To address this, one option is fine-tuning—a process in which the base model is retrained on custom data to better align with specific goals or domains. While effective, fine-tuning is computationally expensive, time-consuming, and requires ongoing maintenance as data evolves.
 
-To address this, one approach is fine-tuning—retraining the base model on custom data to align it with specific use cases or domains. While effective, fine-tuning is computationally expensive, time-consuming, and demands ongoing maintenance as data evolves.
-
 This is where the next pattern, Retrieval-Augmented Generation, can help.
 
 ### RAG - Retrieval-Augmented Generation
@@ -94,4 +92,4 @@ As a result, developers are forced to build and maintain custom logic for each i
 
 Those old enough will remember the PCs of the nineties—and what a pain it was to install new hardware like printers or sound cards. Then along came Plug & Play (PnP) and USB, supported by Windows 95 - you just connected the device, and it was automatically recognized, drivers installed and configured ... and it just worked.
 
-What need that same level of Plug & Play simplicity for AI services. That is what Model Context Protocol (MCP) delivers - a standard mechanism for integrating tools and services. It abstracts away API differences, so developers can focus on building intelligent agents — not grappling with interfaces.
+Developers need the same level of plug-and-play simplicity for AI services. That's exactly what the Model Context Protocol (MCP) delivers: a standard mechanism for integrating tools and services. MCP abstracts away API complexities, letting you focus on building intelligent agents—not grappling with interfaces.
