@@ -90,6 +90,6 @@ As a result, developers are forced to build and maintain custom logic for each i
 
 ## The Solution - Plug & Play 
 
-Those old enough will remember the PCs of the nineties—and what a pain it was to install new hardware like printers or sound cards. Then along came Plug & Play (PnP) and USB, supported by Windows 95 - you just connected the device, and it was automatically recognized, drivers installed and configured ... and it just worked.
+Those old enough will remember the PCs of the nineties—and what a pain it was to install new hardware like printers or sound cards. Then along came Plug & Play (PnP) and USB, supported by Windows 95 - you just connected the device, and it would automatically recognized, drivers installed and configured ... and it just worked.
 
 Developers need the same level of plug-and-play simplicity for AI services. That's exactly what the Model Context Protocol (MCP) delivers: a standard mechanism for integrating tools and services. MCP abstracts away API complexities, letting you focus on building intelligent agents—not grappling with interfaces.
