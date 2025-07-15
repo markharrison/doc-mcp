@@ -20,7 +20,7 @@ From the MCP client's perspective, it is equally important to authenticate the s
 
 In our example setup, the following components participate in the authentication and authorization process:
 
-- Microsoft Entra acts as the OAuth 2.1 Authorization Server, issuing access tokens to authenticated users. An access token is a cryptographically signed string that represents the user's identity and their access permissions. The signature ensures the token's integrity, proving it was issued by Entra and preventing forgery.
+- Microsoft Entra acts as the OAuth 2.1 Authorization Server, issuing access tokens to authenticated users. 
 
 - Visual Studio Code hosts the MCP Client, functioning as the OAuth 2.1 client.
 
@@ -30,7 +30,7 @@ Should a 401 be returned, the MCP Client queries an endpoint at the URL `./well-
 
 As part of the authentication process, the user is shown a consent screen detailing what information will be shared and what permissions the application is requesting. The user can choose whether to proceed. In enterprise environments, administrators may grant consent on behalf of all users in the organization.
 
-The access token follows the JWT (JSON Web Token) standard. You can learn more at [https://jwt.io/introduction](<https://jwt.io/introduction>).
+The access token follows the JWT (JSON Web Token) standard. It is a cryptographically signed string that contains information (claims) about the user's identity and access permissions. The signature ensures the token's integrity - proving it was issued by Entra and preventing forgery. You can learn more at [https://jwt.io/introduction](<https://jwt.io/introduction>).
 
 
 ## Colors MCP Server
