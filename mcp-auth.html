@@ -6,8 +6,8 @@
 <title data-rh="true">MCP Authentication / Authorization | Model Context Protocol (MCP)</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://markharrison.io/doc-mcp/mcp-auth"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="MCP Authentication / Authorization | Model Context Protocol (MCP)"><meta data-rh="true" name="description" content="In the previous section we covered the development of an MCP Server.  In this section we shall extend the server code so that it supports authentication / authorization."><meta data-rh="true" property="og:description" content="In the previous section we covered the development of an MCP Server.  In this section we shall extend the server code so that it supports authentication / authorization."><link data-rh="true" rel="icon" href="/doc-mcp/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://markharrison.io/doc-mcp/mcp-auth"><link data-rh="true" rel="alternate" href="https://markharrison.io/doc-mcp/mcp-auth" hreflang="en"><link data-rh="true" rel="alternate" href="https://markharrison.io/doc-mcp/mcp-auth" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MCP AuthN/AuthZ","item":"https://markharrison.io/doc-mcp/mcp-auth"}]}</script><link rel="preconnect" href="https://www.google-analytics.com">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J96E5KV7Z6"></script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J96E5KV7Z6",{anonymize_ip:!0})</script><link rel="stylesheet" href="/doc-mcp/assets/css/styles.ec45d430.css">
-<script src="/doc-mcp/assets/js/runtime~main.37dd8d4d.js" defer="defer"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J96E5KV7Z6",{anonymize_ip:!0})</script><link rel="stylesheet" href="/doc-mcp/assets/css/styles.efd89cb2.css">
+<script src="/doc-mcp/assets/js/runtime~main.09a3f512.js" defer="defer"></script>
 <script src="/doc-mcp/assets/js/main.bb47d50f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,7 +24,7 @@
 <p>In our example setup, the following components participate in the authentication and authorization process:</p>
 <ul>
 <li>
-<p>Microsoft Entra acts as the OAuth 2.1 Authorization Server, issuing access tokens to authenticated users. An access token is a cryptographically signed string that represents the user&#x27;s identity and their access permissions. The signature ensures the token&#x27;s integrity, proving it was issued by Entra and preventing forgery.</p>
+<p>Microsoft Entra acts as the OAuth 2.1 Authorization Server, issuing access tokens to authenticated users.</p>
 </li>
 <li>
 <p>Visual Studio Code hosts the MCP Client, functioning as the OAuth 2.1 client.</p>
@@ -35,7 +35,7 @@
 </ul>
 <p>Should a 401 be returned, the MCP Client queries an endpoint at the URL <code>./well-known/oauth-protected-resource</code> to retrieve information needed for authentication - this includes the address of the Entra tenant. The flow redirects the user to Entra, where they are prompted to authenticate. Upon successful authentication, the MCP Client receives an access token, which it attaches to a retry of the original request to the MCP Server. The MCP Server then validates the token - if it is valid, access is granted; otherwise, the process repeats.</p>
 <p>As part of the authentication process, the user is shown a consent screen detailing what information will be shared and what permissions the application is requesting. The user can choose whether to proceed. In enterprise environments, administrators may grant consent on behalf of all users in the organization.</p>
-<p>The access token follows the JWT (JSON Web Token) standard. You can learn more at <a href="https://jwt.io/introduction" target="_blank" rel="noopener noreferrer">https://jwt.io/introduction</a>.</p>
+<p>The access token follows the JWT (JSON Web Token) standard. It is a cryptographically signed string that contains information (claims) about the user&#x27;s identity and access permissions. The signature ensures the token&#x27;s integrity - proving it was issued by Entra and preventing forgery. You can learn more at <a href="https://jwt.io/introduction" target="_blank" rel="noopener noreferrer">https://jwt.io/introduction</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="colors-mcp-server">Colors MCP Server<a href="#colors-mcp-server" class="hash-link" aria-label="Direct link to Colors MCP Server" title="Direct link to Colors MCP Server">​</a></h2>
 <p>The source code to the ColorsMCP server is at : <a href="https://github.com/markharrison/ColorsMCP" target="_blank" rel="noopener noreferrer">https://github.com/markharrison/ColorsMCP</a></p>
 <p>The original version of ColorsMCP is in the project:</p>
