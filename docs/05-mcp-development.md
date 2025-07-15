@@ -34,7 +34,7 @@ git clone https://github.com/markharrison/ColorsMCP
 There are several projects in the solution:
 
 - ColorsMCP ... this uses the STDIO transport protocol
-- ColorsMCP-http ... this uses the HTTP Streamable transport protocol
+- ColorsMCP-HTTP ... this uses the HTTP Streamable transport protocol
 - ColorsCommonMCP ... this is common code used by both the ColorMCP and ColorsMCP-http projects
 - MCPClient ... this is a simple client project to test calling the MCP servers
 
@@ -163,7 +163,7 @@ The description fields within these annotations must be clear and precise, as th
 
 ## Deployment 
 
-The ColorsMCP-http project includes a Docker file to build a container.  This makes it simple to deploy e.g. to Azure App Service.
+The ColorsMCP-http project includes a Docker file to build a Docker image / container.  This makes it simple to deploy e.g. to Azure App Service.
 
 The Command to build the container is in the repo ReadMe file.  
 

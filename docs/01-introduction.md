@@ -15,9 +15,7 @@ Also published on [Microsoft Blogs](<https://techcommunity.microsoft.com/blog/ap
 
 ## Introduction
 
-This is a transcript of a session where I discussed the Model Context Protocol (MCP).
-
-Topics covered include:
+A discussion on Model Context Protocol (MCP) - topics covered include:
 
 - Why is there a need for MCP
 
@@ -27,4 +25,4 @@ Topics covered include:
 
 - An example of how to develop an MCP server — a potential starter project for connecting to your own knowledge resources
 
-
+- Extending the MCP Server code to support authentication / authorisation
