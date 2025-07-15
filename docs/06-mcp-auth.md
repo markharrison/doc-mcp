@@ -78,10 +78,6 @@ The following code adds the authentication / authorization rules.
 
 - `AddAuthentication` defines the authentication scheme 
 
-- `AddJwtBearer` sets the rules used to validate the JWT access token. It also includes event handlers for token validation success and failure.
-
-- `AddMcp` logic defines the `ResourceMetadata` - this is information retrieved from the `./well-known/oauth-protected-resource` endpoint.  It includes the address of the Entra authentication service.
-
 ```C#
  builder.Services
      .AddAuthentication(options =>
@@ -90,6 +86,9 @@ The following code adds the authentication / authorization rules.
              options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
          })
 ```
+
+- `AddJwtBearer` sets the rules used to validate the JWT access token. It also includes event handlers for token validation success and failure.
+
 ```C#
      .AddJwtBearer(options =>
          {
@@ -135,6 +134,9 @@ The following code adds the authentication / authorization rules.
              };
          })
 ```
+
+- `AddMcp` logic defines the `ResourceMetadata` - this is information retrieved from the `./well-known/oauth-protected-resource` endpoint.  It includes the address of the Entra authentication service.
+
 ```C#
      .AddMcp(options =>
      {
@@ -212,7 +214,7 @@ To enable secure access, we need to create an App Registration in Microsoft Entr
 
 - Note the Tenant Id - this will be needed for application configuration.
 
-- Using Left Hand menu goto `Entra ID` | `App registrations`
+- Using Left Hand menu select `Entra ID` | `App registrations`
 
 - Select `New Registration`
 
@@ -249,7 +251,7 @@ We are now ready to update the application's configuration. Below are my example
   "Scope": "mcptools.colors"
 ```
 
-The Server URL is a local address used by Visual Studio.   There is a Docker file in the project to build a Docker image / container that makes it easy to deploy the MCP Server to something like Azure App Service,
+The Server URL is a local address used by Visual Studio.   There is a Docker file in the project to build a Docker image / container that makes it easy to deploy the MCP Server to something like Azure App Service.
 
 ## Configuring Visual Studio 
 
@@ -317,7 +319,7 @@ The invididual items within the access token are called claims.  We can see the 
 
 ### Inspecting the OAuth Protected Resource document
 
-Near the top of the console log, the application displayed the URL of the OAuth Protected Resource document. Check this address - it gives information for the MCP Client to know how to authenticate e.g. the address of the Entra tenant.
+Near the top of the console log, the application displayed the URL of the OAuth Protected Resource document. Check out this address - it gives information for the MCP Client to know how to authenticate e.g. the address of the Entra tenant.
 
 ![screenshot](images/authapr.png)
 
