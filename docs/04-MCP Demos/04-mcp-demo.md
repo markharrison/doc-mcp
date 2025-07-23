@@ -1,9 +1,9 @@
 ---
-sidebar_label: 'MCP Demo'
-slug: /mcp-demo
+sidebar_label: 'Demo with VSCode'
+slug: /mcp-demo-vsc
 ---
 
-# MCP Demo
+# MCP Demo with VS Code
 
 This section shows the use of several MCP tools - specifically, these will provide knowledge about Colors, Timer, Prices and Azure Resources.  
 
@@ -71,7 +71,7 @@ The Time MCP server runs in a local container. Ensure that Docker Desktop (or a 
 
 Each server will have a grey status line displayed in the mcp.json file. Ensure that each server shows a status of "Running" and that there are no errors present.
 
-![](images/demo1.png)
+![](../images/demo1.png)
 
 To display the MCP tools that are available:
 
@@ -80,7 +80,7 @@ To display the MCP tools that are available:
 - Select the Tools icon
 - See available tools listed
 
-![](images/demo2.png)
+![](../images/demo2.png)
 
 
 ## Calling MCP Tools 
@@ -92,7 +92,7 @@ When an MCP tool is first used - a prompt will appear requesting permission to c
 - Aways allow
 - Cancel - do not make the call 
 
-![](images/demo3.png)
+![](../images/demo3.png)
 
 
 ### Colors MCP Server
@@ -106,7 +106,7 @@ I need a palette of four colors from the blue family - plus black ...
 please add to colors.html so I can inspect
 ```
 
-![](images/demo4.png)
+![](../images/demo4.png)
 
 ### Time MCP Server 
 
@@ -118,7 +118,7 @@ What is the time in Timbuktu ?
 
 In the screenshot, you can see the container started in Docker Desktop.
 
-![](images/demo5.png)
+![](../images/demo5.png)
 
 
 ### Playwright MCP Server
@@ -133,7 +133,7 @@ Note that the GitHub MCP server includes a tool called Fetch, which can retrieve
 
 In the screenshot, you can see a web browser running in the background. It's possible to run in headless mode (without a browser UI) for faster and less intrusive execution.
 
-![](images/demo6.png)
+![](../images/demo6.png)
 
 ### Azure MCP Server
 
@@ -143,7 +143,7 @@ In GitHub Copilot, ask something like the following - make it appropriate to wha
 What Azure resources do I have running in my Azure subscription ?
 ```
 
-![](images/demo7.png)
+![](../images/demo7.png)
 
 
 
